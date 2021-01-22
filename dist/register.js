@@ -18,9 +18,14 @@ var PANEL_ID = "".concat(ADDON_ID, "/panel"); // give a unique name for the pane
 /* const MyPanel = () => <div>MyAddon</div>; */
 
 var MyPanel = function MyPanel() {
-  var value = (0, _api.useParameter)(PARAM_KEY, null);
-  var item = value ? value.data : "No story parameter defined";
-  return /*#__PURE__*/_react["default"].createElement("div", null, item);
+  /*  const value = useParameter(PARAM_KEY, null);
+   const item = value ? value.data : "No story parameter defined"; */
+  return /*#__PURE__*/_react["default"].createElement(_components.Button, {
+    primary: true,
+    title: "Link Button"
+  }, /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_components.Icons, {
+    icon: "link"
+  }), "I'm an Storybook button icon"));
 };
 
 _addons.addons.register(ADDON_ID, function (api) {

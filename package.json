@@ -2,8 +2,13 @@
   "name": "my-addon",
   "version": "1.0.0",
   "description": "A barebones Storybook addon",
-  "main": "dist/register.js",
+  "main": "dist/preset.js",
   "author": "jonniebigodes",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js"
+  ],
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "babel ./src --out-dir ./dist",
